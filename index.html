@@ -356,12 +356,10 @@ body {
       <label class="form-label">部門</label>
       <select class="form-input" id="inputEmpDept">
         <option value="">請選擇部門</option>
-        <option>業務部</option>
-        <option>行銷部</option>
-        <option>工程部</option>
-        <option>人資部</option>
-        <option>財務部</option>
-        <option>管理部</option>
+        <option>總經理室</option>
+        <option>軟體部</option>
+        <option>設計部</option>
+        <option>製造部</option>
       </select>
     </div>
     <button class="btn-login" onclick="doLogin()">進入打卡系統</button>
@@ -623,7 +621,7 @@ setInterval(tick,1000); tick();
 function doLogin(){
   const id=document.getElementById('inputEmpId').value.trim().toUpperCase();
   const name=document.getElementById('inputEmpName').value.trim();
-  const dept=document.getElementById('inputEmpDept').value;
+  const dept=document.getElementById('').value;
   if(!id||!name||!dept){
     document.getElementById('loginError').style.display='block';
     return;
