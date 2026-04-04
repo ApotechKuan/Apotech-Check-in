@@ -428,7 +428,7 @@ body {
     <!-- GPS -->
     <div class="verify-inner" id="panel-gps">
       <div class="verify-title">📍 GPS 定位驗證</div>
-      <div class="verify-subtitle">限公司 <strong style="color:var(--primary)">500 公尺</strong>內才可打卡（楊梅區中山北路）</div>
+      <div class="verify-subtitle">限公司 <strong style="color:var(--primary)">100 公尺</strong>內才可打卡（楊梅區中山北路）</div>
       <div class="gps-map-mock">
         <div class="map-grid"></div>
         <div class="map-ring"></div>
@@ -607,7 +607,6 @@ let historyRecords=[];
 
 // ── Clock ──
 function pad(n){return String(n).padStart(2,'0')}
-function tick(){
   const now=new Date();
   const el=document.getElementById('liveClock');
   if(el) el.textContent=`${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
@@ -621,7 +620,7 @@ setInterval(tick,1000); tick();
 function doLogin(){
   const id=document.getElementById('inputEmpId').value.trim().toUpperCase();
   const name=document.getElementById('inputEmpName').value.trim();
-  const dept=document.getElementById('').value;
+  const dept=document.getElementById('inputEmpDept').value;
   if(!id||!name||!dept){
     document.getElementById('loginError').style.display='block';
     return;
